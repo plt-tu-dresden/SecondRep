@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CFCD0D0B1CFBA9B7001F34C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD0D0A1CFBA9B7001F34C3 /* main.m */; };
+		CFCD0D1A1CFBB04B001F34C3 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD0D191CFBB04B001F34C3 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		CFCD0D071CFBA9B7001F34C3 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCD0D0A1CFBA9B7001F34C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CFCD0D181CFBB04B001F34C3 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		CFCD0D191CFBB04B001F34C3 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,7 @@
 		CFCD0CFE1CFBA9B7001F34C3 = {
 			isa = PBXGroup;
 			children = (
+				CFCD0D141CFBAF5A001F34C3 /* support */,
 				CFCD0D091CFBA9B7001F34C3 /* HelloWorld */,
 				CFCD0D081CFBA9B7001F34C3 /* Products */,
 			);
@@ -60,6 +64,15 @@
 				CFCD0D0A1CFBA9B7001F34C3 /* main.m */,
 			);
 			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		CFCD0D141CFBAF5A001F34C3 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				CFCD0D181CFBB04B001F34C3 /* Student.h */,
+				CFCD0D191CFBB04B001F34C3 /* Student.m */,
+			);
+			name = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFCD0D0B1CFBA9B7001F34C3 /* main.m in Sources */,
+				CFCD0D1A1CFBB04B001F34C3 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,14 +223,21 @@
 		CFCD0D0F1CFBA9B7001F34C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CFCD0D101CFBA9B7001F34C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -239,6 +260,7 @@
 				CFCD0D101CFBA9B7001F34C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
